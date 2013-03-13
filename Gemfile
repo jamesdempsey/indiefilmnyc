@@ -19,6 +19,7 @@ group :assets do
   gem 'uglifier'
   gem 'bootstrap-sass', '~> 2.0.3.0'
   gem 'handlebars_assets'
+  gem 'hamlbars', '~> 2.0'
 end
 
 group :development do
