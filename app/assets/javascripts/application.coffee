@@ -1,8 +1,8 @@
-#= require modernizr
-#= require jquery
+#= require modernizr.min
+#= require jquery-1.9.1.min
 #= require handlebars
-#= require ember
-#= require ember-data
+#= require ember.min
+#= require ember-data.min
 #= require bootstrap
 #= require_self
 #= require store
