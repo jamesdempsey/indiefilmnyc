@@ -1,0 +1,14 @@
+.navbar.navbar-inverse.navbar-fixed-top
+  .navbar-inner
+    .container
+      .nav-collapse.collapse
+        %ul.nav
+          %li
+            = hb "linkTo 'index'" do
+              Home
+#main.container
+  .content
+    .row
+      .span12
+        .page-header
+          = hb 'outlet'
