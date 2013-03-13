@@ -58,5 +58,11 @@ module Indiefilmnyc
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Disable Test::Unit generators
+    # Change this if rspec gets used
+    config.generators do |g|
+      g.test_framework nil
+    end
   end
 end
