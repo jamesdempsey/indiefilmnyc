@@ -13,7 +13,7 @@ Indiefilmnyc::Application.routes.draw do
 
   resources :films, only: [:index, :show], constraints: FormatTest.new(:json)
   get '*foo', to: 'ember#index', constraints: FormatTest.new(:html)
-  get '/', to: 'ember#index', constraints: FormatTtest.new(:html)
+  get '/', to: 'ember#index', constraints: FormatTest.new(:html)
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
