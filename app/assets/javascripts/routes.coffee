@@ -10,5 +10,8 @@ App.IndexRoute = Ember.Route.extend
     @controllerFor('application').set('currentRoute', 'home')
 
 App.FilmsIndexRoute = Ember.Route.extend
+  model: ->
+    App.Film.find()
   setupController: (controller, model) ->
+    controller.set('films', model)
     @controllerFor('application').set('currentRoute', 'films')
