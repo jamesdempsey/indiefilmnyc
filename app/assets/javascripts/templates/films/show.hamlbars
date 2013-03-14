@@ -1,0 +1,8 @@
+%h1
+  = hb 'title'
+%div
+  %q
+    = hb 'description'
+.page_header
+= hb "linkTo 'films'", class: 'button' do
+  Back
