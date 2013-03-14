@@ -4,3 +4,11 @@ App.Router.reopen
 
 App.Router.map ->
   @resource 'films', ->
+
+App.IndexRoute = Ember.Route.extend
+  setupController: (controller, model) ->
+    @controllerFor('application').set('currentRoute', 'home')
+
+App.FilmsIndexRoute = Ember.Route.extend
+  setupController: (controller, model) ->
+    @controllerFor('application').set('currentRoute', 'films')
