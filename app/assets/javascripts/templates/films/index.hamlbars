@@ -3,10 +3,10 @@
   %tr
     %th= 'ID'
     %th= 'Title'
-  = hb 'each films' do
+  = hb 'each film in films' do
     %tr
       %td
-        = hb 'id'
+        = hb 'film.id'
       %td
-        %a{href: '#'}
-          = hb 'title'
+        = hb "linkTo 'films.show' film" do
+          = hb 'film.title'
