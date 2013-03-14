@@ -6,6 +6,9 @@
           %li
             = hb "linkTo 'index'" do
               Home
+          %li
+            = hb "linkTo 'films.index'" do
+              Films
 #main.container
   .content
     .row
