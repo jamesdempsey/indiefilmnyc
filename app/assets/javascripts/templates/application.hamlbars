@@ -3,10 +3,10 @@
     .container
       .nav-collapse.collapse
         %ul.nav
-          %li
+          %li{ bind: { class: 'isHome:active' } }
             = hb "linkTo 'index'" do
               Home
-          %li
+          %li{ bind: { class: 'isFilms:active' } }
             = hb "linkTo 'films.index'" do
               Films
 #main.container
