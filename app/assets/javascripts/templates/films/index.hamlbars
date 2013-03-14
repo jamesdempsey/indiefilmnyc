@@ -1,1 +1,12 @@
 %h1= 'Films'
+%table.table.table-striped
+  %tr
+    %th= 'ID'
+    %th= 'Title'
+  = hb 'each films' do
+    %tr
+      %td
+        = hb 'id'
+      %td
+        %a{href: '#'}
+          = hb 'title'
