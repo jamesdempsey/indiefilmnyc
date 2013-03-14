@@ -11,16 +11,20 @@ App.IndexRoute = Ember.Route.extend
   setupController: (controller, model) ->
     @controllerFor('application').set('currentRoute', 'home')
 
-App.FilmsIndexRoute = Ember.Route.extend
+App.FilmsRoute = Ember.Route.extend
+  setupController: ->
+    @controllerFor('application').set('currentRoute', 'films')
+
+App.FilmsIndexRoute = App.FilmsRoute.extend
   model: ->
     App.Film.find()
   setupController: (controller, model) ->
+    @_super()
     controller.set('films', model)
-    @controllerFor('application').set('currentRoute', 'films')
 
-App.FilmsShowRoute = Ember.Route.extend
+App.FilmsShowRoute = App.FilmsRoute.extend
   model: (params) ->
     App.Film.find(params.film_id)
   setupController: (controller, model) ->
+    @_super()
     controller.set('films', model)
-    @controllerFor('application').set('currentRoute', 'films')
