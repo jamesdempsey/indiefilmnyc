@@ -3,4 +3,4 @@ App.Router.reopen
   rootURL: '/'
 
 App.Router.map ->
-  @resource 'films'
+  @resource 'films', ->
