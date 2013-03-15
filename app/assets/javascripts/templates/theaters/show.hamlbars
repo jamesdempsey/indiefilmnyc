@@ -8,14 +8,17 @@
     %th= 'ID'
     %th= 'Film'
     %th= 'Showtimes'
-  = hb 'each showing in showings' do
+  = hb 'each film in films' do
     %tr
       %td
-        = hb 'showing.film.id'
+        = hb 'film.id'
       %td
-        = hb "linkTo 'films.show' showing.film" do
-          = hb 'showing.film.title'
+        = hb "linkTo 'films.show' film" do
+          = hb 'film.title'
       %td
-        = hb 'showing.showtime'
+        %ul
+          = hb 'each showing in film.showings' do
+            %li
+              = hb 'showing.showtime'
 = hb "linkTo 'theaters'", class: 'button' do
   Back
