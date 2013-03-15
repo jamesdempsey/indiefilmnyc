@@ -1,0 +1,20 @@
+.page-header
+  %h1
+    = hb 'name'
+%h2
+  %small= 'Films'
+%table.table.table-striped
+  %tr
+    %th= 'ID'
+    %th= 'Film'
+    %th= 'Showtimes'
+  = hb 'each showing in showings' do
+    %tr
+      %td
+        = hb 'showing.film.id'
+      %td
+        = hb 'showing.film.title'
+      %td
+        = hb 'showing.showtime'
+= hb "linkTo 'theaters'", class: 'button' do
+  Back
