@@ -3,7 +3,7 @@
   %tr
     %th= 'ID'
     %th= 'Name'
-  = hb 'each theater in theaters' do
+  = hb 'each theater in arrangedContent' do
     %tr
       %td
         = hb 'theater.id'
