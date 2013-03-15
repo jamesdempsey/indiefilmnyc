@@ -12,6 +12,7 @@ Indiefilmnyc::Application.routes.draw do
   end
 
   resources :films, only: :index, constraints: FormatTest.new(:json)
+  resources :theaters, only: :index, constraints: FormatTest.new(:json)
   get '*foo', to: 'ember#index', constraints: FormatTest.new(:html)
   get '/', to: 'ember#index', constraints: FormatTest.new(:html)
   # The priority is based upon order of creation:
