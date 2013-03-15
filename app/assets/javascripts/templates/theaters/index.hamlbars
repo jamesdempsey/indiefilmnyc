@@ -1,0 +1,13 @@
+.page-header
+  %h1= 'Theaters'
+%table.table.table-striped
+  %tr
+    %th= 'ID'
+    %th= 'Name'
+  = hb 'each theater in theaters' do
+    %tr
+      %td
+        = hb 'theater.id'
+      %td
+        = hb "linkTo 'theaters.show' theater" do
+          = hb 'theater.name'
