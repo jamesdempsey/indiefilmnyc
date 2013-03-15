@@ -30,7 +30,7 @@ end
   Film.create(title: generate_film_title, description: generate_film_description)
 end
 
-100.times do
+20.times do
   Theater.create(name: generate_theater_name)
 end
 
