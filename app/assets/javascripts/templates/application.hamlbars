@@ -9,6 +9,9 @@
           %li{ bind: { class: 'isFilms:active' } }
             = hb "linkTo 'films.index'" do
               Films
+          %li{ bind: { class: 'isTheaters:active' } }
+            = hb "linkTo 'theaters.index'" do
+              Theaters
 #main.container
   .content
     .row
