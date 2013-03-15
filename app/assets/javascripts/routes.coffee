@@ -48,4 +48,4 @@ App.TheatersShowRoute = App.TheatersRoute.extend
     App.Theater.find(params.theater_id)
   setupController: (controller, model) ->
     @_super()
-    controller.set('theaters', model)
+    controller.set('theater', model)
