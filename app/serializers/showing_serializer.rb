@@ -3,5 +3,6 @@ class ShowingSerializer < ActiveModel::Serializer
 
   attributes :id, :film_id, :theater_id, :showtime
 
+  has_one :film
   has_one :theater
 end
