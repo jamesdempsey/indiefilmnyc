@@ -1,5 +1,4 @@
-.page-header
-  %h1= 'Films'
+%h1= 'Films'
 %table.table.table-striped
   %tr
     %th= 'ID'
