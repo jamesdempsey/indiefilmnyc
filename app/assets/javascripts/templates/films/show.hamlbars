@@ -20,5 +20,7 @@
         = hb 'showing.id'
       %td
         = hb 'showing.showtime'
+      %td
+        = hb 'showing.theater.name'
 = hb "linkTo 'films'", class: 'button' do
   Back
