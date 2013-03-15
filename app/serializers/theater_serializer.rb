@@ -4,4 +4,5 @@ class TheaterSerializer < ActiveModel::Serializer
   attributes :id, :name
 
   has_many :showings
+  has_many :films, through: :showings
 end
