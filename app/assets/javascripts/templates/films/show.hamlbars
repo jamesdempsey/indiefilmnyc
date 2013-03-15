@@ -6,5 +6,19 @@
 %div
   %q
     = hb 'description'
+.page-header
+%h2
+  %small= 'Showtimes'
+%table.table.table-striped
+  %tr
+    %th= 'ID'
+    %th= 'Showtime'
+    %th= 'Theater'
+  = hb 'each showing in showings' do
+    %tr
+      %td
+        = hb 'showing.id'
+      %td
+        = hb 'showing.showtime'
 = hb "linkTo 'films'", class: 'button' do
   Back
