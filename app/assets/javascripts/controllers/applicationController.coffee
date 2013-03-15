@@ -6,3 +6,7 @@ App.ApplicationController = Ember.Controller.extend
   isFilms: (->
     @get('currentRoute') == 'films'
   ).property('currentRoute')
+
+  isTheaters: (->
+    @get('currentRoute') == 'theaters'
+  ).property('currentRoute')
