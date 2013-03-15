@@ -13,7 +13,8 @@
       %td
         = hb 'showing.film.id'
       %td
-        = hb 'showing.film.title'
+        = hb "linkTo 'films.show' showing.film" do
+          = hb 'showing.film.title'
       %td
         = hb 'showing.showtime'
 = hb "linkTo 'theaters'", class: 'button' do
