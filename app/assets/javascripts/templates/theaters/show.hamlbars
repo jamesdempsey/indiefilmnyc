@@ -18,7 +18,6 @@
       %td
         %ul
           = hb 'each showing in film.showings' do
-            %li
-              = hb 'showing.showtime'
+            = hb 'getTheaterShowtime theater showing'
 = hb "linkTo 'theaters'", class: 'button' do
   Back
