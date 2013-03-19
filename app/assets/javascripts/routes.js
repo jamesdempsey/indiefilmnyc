@@ -44,7 +44,7 @@ App.FilmsShowRoute = App.FilmsRoute.extend({
   },
   setupController: function(controller, model) {
     this._super();
-    controller.set('films', model);
+    controller.set('film', model);
   }
 });
 
@@ -70,7 +70,6 @@ App.TheatersShowRoute = App.TheatersRoute.extend({
   },
   setupController: function(controller, model) {
     this._super();
-    controller.set('theaters', model);
-    controller.set('scoped_showing', App.Showing.find());
+    controller.set('theater', model);
   }
 });
