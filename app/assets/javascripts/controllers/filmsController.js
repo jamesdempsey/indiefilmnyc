@@ -8,7 +8,3 @@ App.FilmsShowController = Ember.ObjectController.extend({
     return this.get('showings')
   }.property('showings')
 });
-
-//App.FilmsIndexController = Ember.ArrayController.extend
-  //sortProperties: ['title'],
-  //sortAscending: true
