@@ -8,16 +8,17 @@
     %th= 'ID'
     %th= 'Film'
     %th= 'Showtimes'
-  = hb 'each film in films' do
+  = hb 'each film in films itemController="filmShowings"' do
     %tr
       %td
-        = hb 'film.id'
+        = hb 'id'
       %td
         = hb "linkTo 'films.show' film" do
-          = hb 'film.title'
+          = hb 'title'
       %td
         %ul
-          = hb 'each showing in film.showings' do
-            = hb 'getTheaterShowtime theater showing'
+          = hb 'each filmShowings' do
+            %li
+              = hb 'showtime'
 = hb "linkTo 'theaters'", class: 'button' do
   Back

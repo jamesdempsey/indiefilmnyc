@@ -71,5 +71,6 @@ App.TheatersShowRoute = App.TheatersRoute.extend({
   setupController: function(controller, model) {
     this._super();
     controller.set('theater', model);
+    App.Showing.find();
   }
 });
