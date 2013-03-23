@@ -71,6 +71,7 @@ App.TheatersShowRoute = App.TheatersRoute.extend({
   setupController: function(controller, model) {
     this._super();
     controller.set('theater', model);
+    this.controllerFor('filmsIndex').set('content', model.get('films'));
     App.Showing.all();
   }
 });

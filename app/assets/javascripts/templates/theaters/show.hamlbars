@@ -8,7 +8,7 @@
     %th= 'ID'
     %th= 'Film'
     %th= 'Showtimes'
-  = hb 'each film in films itemController="filmShowings"' do
+  = hb 'each film in controllers.filmsIndex itemController="filmShowings"' do
     %tr
       %td
         = hb 'id'
