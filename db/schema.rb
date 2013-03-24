@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130324173017) do
+ActiveRecord::Schema.define(:version => 20130324181125) do
 
   create_table "films", :force => true do |t|
     t.string   "title"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(:version => 20130324173017) do
     t.datetime "updated_at",  :null => false
     t.string   "url"
   end
+
+  add_index "films", ["url"], :name => "index_films_on_url", :unique => true
 
   create_table "showings", :force => true do |t|
     t.integer  "film_id"
@@ -35,5 +37,7 @@ ActiveRecord::Schema.define(:version => 20130324173017) do
     t.datetime "updated_at", :null => false
     t.string   "url"
   end
+
+  add_index "theaters", ["url"], :name => "index_theaters_on_url", :unique => true
 
 end
