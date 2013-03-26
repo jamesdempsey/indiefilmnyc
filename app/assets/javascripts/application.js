@@ -4,6 +4,7 @@
 //= require ember.min
 //= require ember-data.min
 //= require bootstrap
+//= require jquery.isotope.min
 //= require_self
 //= require store
 //= require routes
