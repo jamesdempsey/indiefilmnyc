@@ -8,7 +8,7 @@ module Scrapers
       film_title = film_doc.css('.post h1').first.content
 
       p_nodes = film_doc.css('.post p').select do |p_node|
-        p_node.content.split.size > 40
+        p_node.content.split.size > 30
       end
 
       film_desc = p_nodes.first.content
@@ -58,6 +58,18 @@ module Scrapers
     if next_node.present?
       next_url = 'http://www.ifccenter.com' + next_node.first.attributes['href'].value
       scrape_ifc_coming_soon(next_url)
+    end
+  end
+
+  def scrape_ifc_now_playing(ifc_now_playing_url)
+    ifc_now_playing = Nokogiri::HTML(open(ifc_now_playing_url))
+
+    ifc_now_playing.css('.calendarListing li').each do |li_node|
+      film_url = li_node.css('a').first.attributes['href'].value
+
+      if URI.parse(film_url).host.downcase == 'www.ifccenter.com'
+        scrape_ifc_doc(film_url)
+      end
     end
   end
 end
