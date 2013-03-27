@@ -1,12 +1,2 @@
 %h1= 'Films'
-%table.table.table-striped
-  %tr
-    %th= 'ID'
-    %th= 'Title'
-  = hb 'each film in arrangedContent' do
-    %tr
-      %td
-        = hb 'film.id'
-      %td
-        = hb "linkTo 'films.show' film" do
-          = hb 'film.title'
+= hb 'view App.FilmsContainer'
